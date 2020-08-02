@@ -1,4 +1,4 @@
-Ansible Role: rpi-unifi
+Ansible Role: rpi_unifi
 =======================
 
 [![Build Status](https://travis-ci.com/ThirstySpace/ansible-role-rpi-unifi.svg?branch=master)](https://travis-ci.com/ThirstySpace/ansible-role-rpi-unifi)
@@ -28,7 +28,7 @@ Including an example of how to use your role (for instance, with variables passe
     - hosts: servers
       become: yes
       roles:
-         - role: rpi-unifi
+         - role: thirstyspace.rpi_unifi
 
 License
 -------
