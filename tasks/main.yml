@@ -1,2 +1,12 @@
 ---
 # tasks file for rpi-unifi
+- name: Install dependencies.
+  apt:
+    name: 
+      - openjdk-8-jre-headless
+      - rng-tools
+    state: present
+
+# TODO: configure rng-tools
+
+# https://pimylifeup.com/rasberry-pi-unifi/
