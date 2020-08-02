@@ -7,7 +7,7 @@ sudo: false
 
 env:
   global:
-    - ROLE_NAME: rpi-unifi
+    - ROLE_NAME: rpi_unifi
 
 # Install ansible
 addons:
@@ -28,7 +28,7 @@ install:
 before_script:
   # Use actual Ansible Galaxy role name for the project directory.
   - cd ../
-  - mv ansible-role-$ROLE_NAME thirstyspace.$ROLE_NAME
+  - mv ansible-role-rpi-unifi thirstyspace.$ROLE_NAME
   - cd thirstyspace.$ROLE_NAME
 
 script:
