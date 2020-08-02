@@ -5,6 +5,8 @@
     name: 
       - openjdk-8-jre-headless
       - rng-tools
+      - ca-certificates
+      - apt-transport-https
     state: present
 
 - name: Configure rng-tools
@@ -39,3 +41,9 @@
     autoclean: yes
     autoremove: yes
   notify: 'Restart unifi controller.'
+  
+- name: Start unifi controller.
+  service:
+    name: unifi
+    state: started
+    enabled: yes
