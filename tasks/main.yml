@@ -2,7 +2,7 @@
 # tasks file for rpi-unifi
 - name: Install dependencies.
   apt:
-    name: 
+    name:
       - openjdk-8-jre-headless
       - rng-tools
       - ca-certificates
@@ -22,26 +22,26 @@
     keyserver: keyserver.ubuntu.com
     id: 06E85760C0A52C50
     state: present
-    
+
 - name: Add ubiquiti repo.
   apt_repository:
     repo: 'deb http://www.ubnt.com/downloads/unifi/debian stable ubiquiti'
     filename: 100-ubnt-unifi.list
-    update_cache: yes
+    update_cache: true
     state: present
 
 - name: Install unifi controller.
   apt:
     name: unifi
     state: present
-    allow_unauthenticated: yes
-    update_cache: yes
-    autoclean: yes
-    autoremove: yes
+    allow_unauthenticated: true
+    update_cache: true
+    autoclean: true
+    autoremove: true
   notify: 'Restart unifi controller.'
-  
+
 - name: Start unifi controller.
   service:
     name: unifi
     state: started
-    enabled: yes
+    enabled: true
