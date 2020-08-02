@@ -7,6 +7,35 @@
       - rng-tools
     state: present
 
-# TODO: configure rng-tools
+- name: Configure rng-tools
+  lineinfile:
+    path: "/etc/default/rng-tools"
+    regexp: '^#HRNGDEVICE=/dev/hwrng'
+    line: 'HRNGDEVICE=/dev/hwrng'
+    state: present
+  notifiy: 'Restart rng-tools.'
+
 
 # https://pimylifeup.com/rasberry-pi-unifi/
+- name: Add unifi repo gpg key.
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: 06E85760C0A52C50
+    state: present
+    
+- name: Add ubiquiti repo.
+  apt_repository:
+    repo: 'deb http://www.ubnt.com/downloads/unifi/debian stable ubiquiti'
+    filename: 100-ubnt-unifi.list
+    update_cache: yes
+    state: present
+
+- name: Install unifi controller.
+  apt:
+    name: unifi
+    state: present
+    allow_unauthenticated: yes
+    update_cache: yes
+    autoclean: yes
+    autoremove: yes
+  notify: 'Restart unifi controller.'
