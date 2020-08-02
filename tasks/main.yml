@@ -9,16 +9,14 @@
       - apt-transport-https
     state: present
 
-- name: Configure rng-tools
+- name: Configure rng-tools.
   lineinfile:
-    path: "/etc/default/rng-tools"
+    path: /etc/default/rng-tools
     regexp: '^#HRNGDEVICE=/dev/hwrng'
     line: 'HRNGDEVICE=/dev/hwrng'
     state: present
-  notifiy: 'Restart rng-tools.'
+  notify: 'Restart rng-tools.'
 
-
-# https://pimylifeup.com/rasberry-pi-unifi/
 - name: Add unifi repo gpg key.
   apt_key:
     keyserver: keyserver.ubuntu.com

@@ -5,7 +5,7 @@
     name: unifi
     state: restarted
 
-- name: Restart rng-tools
+- name: Restart rng-tools.
   service:
     name: rng-tools
     state: restarted
