@@ -1,5 +1,5 @@
-Role Name
-=========
+Ansible Role: rpi-unifi
+=======================
 
 [![Build Status](https://travis-ci.com/ThirstySpace/ansible-role-rpi-unifi.svg?branch=master)](https://travis-ci.com/ThirstySpace/ansible-role-rpi-unifi)
 
@@ -13,12 +13,12 @@ This role requires ansible 2.9.
 Role Variables
 --------------
 
-none.
+This role has no variables.
 
 Dependencies
 ------------
 
-none.
+This role has no dependencies.
 
 Example Playbook
 ----------------
