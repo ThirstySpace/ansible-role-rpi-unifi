@@ -2,9 +2,7 @@ galaxy_info:
   author: Heiko Neblung
   description: This role installs unifi controller on raspbian
 
-  # If the issue tracker for your role is not on github, uncomment the
-  # next line and provide a value
-  # issue_tracker_url: http://example.com/issue/tracker
+  issue_tracker_url: https://github.com/ThirstySpace/ansible-role-rpi-unifi/issues
 
   license: MIT
 
