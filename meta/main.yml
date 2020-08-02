@@ -1,5 +1,5 @@
 galaxy_info:
-  role_name: rpi-unifi
+  role_name: rpi_unifi
   author: Heiko Neblung
   description: This role installs unifi controller on raspbian
 
