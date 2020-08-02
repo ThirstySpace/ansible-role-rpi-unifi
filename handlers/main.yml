@@ -1,2 +1,6 @@
 ---
 # handlers file for rpi-unifi
+- name: Restart unifi controller.
+  service:
+    name: unifi
+    state: restarted
